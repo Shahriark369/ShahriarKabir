@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}projects{% endblock %}
+
+{% block content %}
+<h1 class="dot-matrix">My projects</h1>
+
+<div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Project 1">
+        <h3>📱 EDIfication Learning Platform</h3>
+        <p>A full educational website built using Flask that includes quizzes, video notes, timestamped learning, and subject filtering by board & year.</p>
+        <a href="https://github.com/Shahriark369/Edification" target="_blank">View Project</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/project2.png') }}" alt="Project 2">
+        <h3>🎮 Matrix Glitch Runner</h3>
+        <p>A 2D endless runner game made with Kaboom.js where you escape the Matrix by dodging agents and collecting red pills!</p>
+        <a href="#">Live Demo</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+        <img src="{{ url_for('static', filename='images/project3.jpeg') }}" alt="Project 3">
+        <h3>🎬 Short Film – দ্বৈত ছায়া</h3>
+        <p>A deeply emotional psychological short film in Bengali exploring shadows of the mind, relationships, and inner conflict.</p>
+        <a href="#">Watch on YouTube</a>
+    </div>
+
+</div>
+{% endblock %}

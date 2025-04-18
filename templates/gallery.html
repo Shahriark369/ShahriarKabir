@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Photo Gallery{% endblock %}
+
+{% block content %}
+<h1 class="dot-matrix">📷 Photo Gallery</h1>
+
+<div class="gallery-grid">
+    <img src="{{ url_for('static', filename='images/gallery1.jpg') }}" alt="Photo 1">
+    <img src="{{ url_for('static', filename='images/gallery2.jpg') }}" alt="Photo 2">
+    <img src="{{ url_for('static', filename='images/gallery3.jpg') }}" alt="Photo 3">
+    <img src="{{ url_for('static', filename='images/gallery4.jpg') }}" alt="Photo 4">
+    <img src="{{ url_for('static', filename='images/gallery5.jpg') }}" alt="Photo 5">
+    <img src="{{ url_for('static', filename='images/gallery6.jpg') }}" alt="Photo 6">
+    <img src="{{ url_for('static', filename='images/gallery7.jpg') }}" alt="Photo 7">
+    <img src="{{ url_for('static', filename='images/gallery8.jpg') }}" alt="Photo 8">
+    <img src="{{ url_for('static', filename='images/gallery9.jpg') }}" alt="Photo 9">
+</div>
+{% endblock %}

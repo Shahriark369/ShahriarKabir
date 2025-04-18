@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+    <meta charset="UTF-8">
+    <title>{% block title %}My Personal Website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <canvas class="matrix-canvas"></canvas>
+    <div class="infinity-particle"></div>
+    <script src="{{ url_for('static', filename='infinity-follow.js') }}"></script>
+
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('about') }}">About</a> |
+        <a href="{{ url_for('contact') }}">Contact</a> |
+        <a href="{{ url_for('projects') }}">Projects</a> |
+        <a href="{{ url_for('gallery') }}">Gallery</a>
+        
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

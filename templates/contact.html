@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h1 class="dot-matrix">Contact Me</h1>
+
+    <div class="contact-section">
+        <p>Feel free to reach out to me via whatsapp for collaborations, ideas, feedback, or just a friendly hello!</p>
+
+        <form id="contactForm" action="javascript:void(0);" method="post" class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write something..." required></textarea>
+
+            <button type="submit" id="whatsappLink">Send Message via WhatsApp</button>
+        </form>
+    </div>
+
+    <div class="alt-contact">
+        <p>📧 Email: <a href="mailto:shahriarkabircricket30@gmail.com">Mail me</a></p>
+        <p>🌐 Facebook: <a href="https://www.facebook.com/profile.php?id=61551146495111" target="_blank">Facebook.com</a></p>
+        <p>💬 Whatsapp: <a href="https://wa.me/+8801400461284?text=Hello%2C%20I%20would%20like%20to%20contact%20you%21">Message me</a></p>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const whatsappMessage = `Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+            const whatsappLink = `https://wa.me/+8801400461284?text=${whatsappMessage}`;
+
+            window.open(whatsappLink, '_blank');
+        });
+    </script>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-hero">
+    <h1 class="dot-matrix big">Welcome to My World</h1>
+    <p class="tagline">I'm Shahriar — Developer, Designer, Dreamer.</p>
+    <a href="{{ url_for('about') }}" class="hero-btn">Explore More</a>
+</div>
+
+<div class="home-intro">
+    <h2>🚀 What I Do</h2>
+    <p>I build unique digital experiences using <strong>Flask, HTML, CSS, JS</strong> and love turning ideas into interactive websites, apps, and stories.</p>
+
+    <h2>🛠 Latest Project</h2>
+    <div class="latest-project">
+        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Latest Project">
+        <div>
+            <h3>EDIfication Learning Platform</h3>
+            <p>An all-in-one education site with interactive learning, quizzes, board-wise filters, and more!</p>
+            <a href="{{ url_for('projects') }}">See All Projects</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
