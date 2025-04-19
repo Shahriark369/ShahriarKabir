@@ -243,23 +243,25 @@ hr {
     padding: 10px;
 }
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+    padding: 10px;
+}
+
 .gallery-grid img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 6px;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    box-shadow: 0 0 12px #00ff00aa;
-    background-image: radial-gradient(#00ff00 1px, transparent 1px);
-    background-size: 5px 5px;
-    mix-blend-mode: overlay;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #00ffcc88;
     transition: transform 0.3s ease;
 }
 
 .gallery-grid img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 16px #00ff88;
 }
 
 .alt-contact {
