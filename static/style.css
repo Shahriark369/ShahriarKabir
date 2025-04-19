@@ -234,6 +234,7 @@ hr {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -247,13 +248,17 @@ hr {
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 8px #00ffcc88;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 12px 4px #00ff00aa;
+    image-rendering: pixelated;
+    border: 2px dotted #00ff00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 16px 6px #00ff88;
 }
+
 .alt-contact {
     margin-top: 30px;
     padding: 20px;
