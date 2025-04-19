@@ -15,4 +15,26 @@
     <img src="{{ url_for('static', filename='images/gallery8.jpg') }}" alt="Photo 8">
     <img src="{{ url_for('static', filename='images/gallery9.jpg') }}" alt="Photo 9">
 </div>
+<script>
+    let currentIndex = 10;
+    const totalImages = 100; // মোট কতগুলো ইমেজ আছে, সেটা তুমি ইচ্ছেমতো বসাও
+    const batchSize = 9;
+    const galleryGrid = document.querySelector('.gallery-grid');
+
+    function loadImages() {
+        for (let i = 0; i < batchSize && currentIndex <= totalImages; i++, currentIndex++) {
+            const img = document.createElement('img');
+            img.src = "{{ url_for('static', filename='images/') }}" + 'gallery' + currentIndex + '.jpg';
+            img.alt = "Photo " + currentIndex;
+            galleryGrid.appendChild(img);
+        }
+    }
+
+    window.addEventListener('scroll', () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+            loadImages();
+        }
+    });
+</script>
+
 {% endblock %}
