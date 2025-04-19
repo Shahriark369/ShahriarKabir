@@ -256,7 +256,7 @@ hr {
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 8px #00ffcc88;
+    box-shadow: 0 0 13px #00ffcc88;
     transition: transform 0.3s ease;
 }
 
